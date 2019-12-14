@@ -1,0 +1,350 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Dec  6 20:11:00 2019
+# Process ID: 24448
+# Current directory: C:/vivado/one-cycle-cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent42948 C:\vivado\one-cycle-cpu\one-cycle-cpu.xpr
+# Log file: C:/vivado/one-cycle-cpu/vivado.log
+# Journal file: C:/vivado/one-cycle-cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/vivado/one-cycle-cpu/one-cycle-cpu.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 819.199 ; gain = 197.699
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: CPU
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 911.137 ; gain = 45.680
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'CPU' [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/CPU.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PC' [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/PC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (1#1) [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/PC.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IM' [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/InstructionMemory.v:22]
+INFO: [Synth 8-3876] $readmem data file 'C:/vivado/one-cycle-cpu/instructions.txt' is read successfully [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/InstructionMemory.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'IM' (2#1) [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/InstructionMemory.v:22]
+INFO: [Synth 8-6157] synthesizing module 'CL' [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/Control.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'CL' (3#1) [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/Control.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RG' [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/Registers.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'RG' (4#1) [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/Registers.v:22]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-226] default block is never used [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/ALU.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (5#1) [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DM' [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/DataMemory.v:23]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "mem_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'DM' (6#1) [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/DataMemory.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'CPU' (7#1) [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/CPU.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1185.602 ; gain = 320.145
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1185.602 ; gain = 320.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1185.602 ; gain = 320.145
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/constrs_1/new/one.xdc]
+WARNING: [Vivado 12-507] No nets matched 'clk_IBUF'. [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/constrs_1/new/one.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/constrs_1/new/one.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/constrs_1/new/one.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1478.984 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:33 ; elapsed = 00:00:30 . Memory (MB): peak = 1514.027 ; gain = 648.570
+20 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:30 . Memory (MB): peak = 1514.027 ; gain = 648.570
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/vivado/one-cycle-cpu/one-cycle-cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ocycpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/vivado/one-cycle-cpu/one-cycle-cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj ocycpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RG
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sim_1/new/ocycpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ocycpu
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/vivado/one-cycle-cpu/one-cycle-cpu.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 6de9ff1ae6b6405a81f7b9d878792737 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ocycpu_behav xil_defaultlib.ocycpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.CL
+Compiling module xil_defaultlib.RG
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.ocycpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ocycpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/vivado/one-cycle-cpu/one-cycle-cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ocycpu_behav -key {Behavioral:sim_1:Functional:ocycpu} -tclbatch {ocycpu.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source ocycpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1641.586 ; gain = 18.801
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ocycpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1641.586 ; gain = 18.801
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/vivado/one-cycle-cpu/one-cycle-cpu.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Dec  6 21:23:38 2019] Launched synth_1...
+Run output will be captured here: C:/vivado/one-cycle-cpu/one-cycle-cpu.runs/synth_1/runme.log
+[Fri Dec  6 21:23:38 2019] Launched impl_1...
+Run output will be captured here: C:/vivado/one-cycle-cpu/one-cycle-cpu.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183796174A
+open_hw_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2497.973 ; gain = 844.863
+set_property PROGRAM.FILE {C:/vivado/one-cycle-cpu/one-cycle-cpu.runs/impl_1/CPU.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/vivado/one-cycle-cpu/one-cycle-cpu.runs/impl_1/CPU.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183796174A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183796174A
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183796174A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183796174A
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/vivado/one-cycle-cpu/one-cycle-cpu.runs/impl_1/CPU.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183796174A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183796174A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183796174A
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-Basys3-210183796174A" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-Basys3-210183796174A" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183796174A
+set_property PROGRAM.FILE {C:/vivado/one-cycle-cpu/one-cycle-cpu.runs/impl_1/CPU.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/vivado/one-cycle-cpu/one-cycle-cpu.runs/impl_1/CPU.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/vivado/one-cycle-cpu/one-cycle-cpu.runs/impl_1/CPU.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/vivado/one-cycle-cpu/one-cycle-cpu.runs/impl_1/CPU.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/vivado/one-cycle-cpu/one-cycle-cpu.runs/impl_1/CPU.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/vivado/one-cycle-cpu/one-cycle-cpu.runs/impl_1/CPU.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/vivado/one-cycle-cpu/one-cycle-cpu.runs/impl_1/CPU.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+export_ip_user_files -of_objects  [get_files C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/getPCsrc.v] -no_script -reset -force -quiet
+remove_files  C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/getPCsrc.v
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/vivado/one-cycle-cpu/one-cycle-cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ocycpu' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/vivado/one-cycle-cpu/one-cycle-cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj ocycpu_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RG
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sim_1/new/ocycpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ocycpu
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/vivado/one-cycle-cpu/one-cycle-cpu.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 6de9ff1ae6b6405a81f7b9d878792737 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ocycpu_behav xil_defaultlib.ocycpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.CL
+Compiling module xil_defaultlib.RG
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DM
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.ocycpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ocycpu_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/vivado/one-cycle-cpu/one-cycle-cpu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ocycpu_behav -key {Behavioral:sim_1:Functional:ocycpu} -tclbatch {ocycpu.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source ocycpu.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 2697.371 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ocycpu_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 2697.371 ; gain = 0.000

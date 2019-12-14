@@ -1,0 +1,4 @@
+Running: xsim.dir/ocycpu_behav/xsimk.exe -simmode gui -wdb ocycpu_behav.wdb -simrunnum 0 -socket 51117
+Design successfully loaded
+Design Loading Memory Usage: 5320 KB (Peak: 5320 KB)
+Design Loading CPU Usage: 61 ms

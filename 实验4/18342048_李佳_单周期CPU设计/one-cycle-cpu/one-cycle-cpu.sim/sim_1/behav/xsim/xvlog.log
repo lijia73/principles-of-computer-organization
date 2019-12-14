@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CL
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RG
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/vivado/one-cycle-cpu/one-cycle-cpu.srcs/sim_1/new/ocycpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ocycpu
